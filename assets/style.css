@@ -52,6 +52,7 @@ footer a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
+    text-decoration: underline;
 }
 ul{
     list-style-type: none;
