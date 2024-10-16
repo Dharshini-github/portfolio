@@ -3,4 +3,4 @@ Hello all this my portfolio website ,This website was made by the languages of h
 
 
 if you want to view click this 
-https://itsdharshinib-portfolio.netlify.app/
+https://portfolio-vert-nine-63.vercel.app/
