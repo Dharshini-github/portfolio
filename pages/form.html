@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href ="./assets/style.css">
+    <style>
+       
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4f044f;; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+h1 {
+  color: #fff; 
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  width: 100%;
+  background-color: #fff; 
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  max-width: 400px; 
+  margin: 0 auto;
+}
+
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box; 
+}
+
+textarea {
+  resize: vertical; 
+}
+
+
+button {
+  background-color: greeen; 
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px; 
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+  background-color: green; 
+}
+
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+    <div class ="form-container">
+        <h2>Contact Me</h2>
+        <form id="ContacForm"onsubmit="return validation()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Your Email" required>
+            <label for="message">Message:</label>
+            <textarea  id="message" name="message" placeholder="share your thoughts" rows="4"required></textarea>
+           <button type ="submit">Submit</button>
+           <div id="formError" class="error-message"></div>
+        </form>
+    </div>
+    <script>
+        function validation(){
+            const name = document.getelementbyId('name').value.trim();
+            const email = document.getelementbyId('email').value.trim();
+            const message = document.getelementbyId('message').value.trim();
+            const errormessage = document.getelementbyId('errormessage').value.trim();
+            errormessage.textcontent ='';
+
+            if(!name||!email){
+                errormessage.textcontent="please fill  all the field.";
+                return false;
+            }
+            const emailpattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if(!emailpattern,test(email)){
+                errormessage.textcontent ="Please enter the valid email.";
+                return false;
+            }t
+            alert("Form Submmited Succesfully.");
+            return true;
+        }
+    </script>
+
+
+<body>
+</html>
